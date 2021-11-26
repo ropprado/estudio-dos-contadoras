@@ -1,0 +1,12 @@
+vich_uploader:
+  db_driver: orm
+
+  mappings: 
+    blog_images: 
+      uri_prefix: '%app.path.blog_image%'
+      upload_destination: '%kernel.project_dir%/public/imagenes/blog'
+      namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+      
+      inject_on_load: false
+      delete_on_update: true
+      delete_on_remove: true

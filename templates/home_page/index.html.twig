@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block Body %}
+  <!-- ======= Welcome Section ======= -->
+  <section id="hero-no-slider" class="d-flex justify-cntent-center align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-8">
+          <h2>Bienvenidos a <br> Estudio Dos Contadoras</h2>
+          <p>Nuestra intención como Contadoras Públicas es brindarle un servicio de alto nivel profesional, ofrecerle soluciones concretas a sus necesidades y acompañarlo en su crecimiento</p>
+          <a href="{{ url('contact')}}" class="btn-get-started ">Contáctenos</a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Welcome Section -->
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="section-title">
+        <h2> Servicios </h2>
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Impositivo</a></h4>
+              <p class="description">Asesoramiento impositivo y liquidación de impuestos: Ganancias, Bienes Personales, IVA, Ingresos Brutos.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bxs-calculator"></i></div>
+              <h4 class="title"><a href="">Contable</a></h4>
+              <p class="description">Auditoría y servicios contables para empresas. Elaboración de Estados Contables.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue"> 
+              <div class="icon"><i class="bx bxs-user-account"></i></div>
+              <h4 class="title"><a href="">Laboral</a></h4>
+              <p class="description">Liquidación de sueldos y cargas sociales y asesoramiento sobre Convenios Colectivos de Trabajo.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}

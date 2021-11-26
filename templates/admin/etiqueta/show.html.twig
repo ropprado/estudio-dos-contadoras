@@ -1,0 +1,26 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Etiqueta{% endblock %}
+
+{% block body %}
+    <h1>Etiqueta</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ etiqueta.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ etiqueta.nombre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_etiqueta_index') }}">volver al listado</a>
+
+    <a href="{{ path('admin_etiqueta_edit', {'id': etiqueta.id}) }}">Editar</a>
+
+    {{ include('admin/etiqueta/_delete_form.html.twig') }}
+{% endblock %}

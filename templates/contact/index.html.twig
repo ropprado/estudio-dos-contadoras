@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block Body %}
+      <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Contacto</h2>
+          <ol>
+            <li><a href="index.html.twig">Inicio</a></li>
+            <li>Contacto</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Dirección</h3>
+                  <p>Aráoz 744 - C1414, Villa Crespo, CABA</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email</h3>
+                  <p>estudio.doscontadoras@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Teléfono</h3>
+                  <p>+54 11 3025 2157</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+          <section class="contact-form">
+          
+          {{ form_start(formulario) }}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  {{ form_widget(formulario.nombre,{'attr':{'class':'form-control','placeholder':'Nombre'} }) }}
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  {{ form_widget(formulario.email,{'attr':{'class':'form-control','placeholder':'Email'} }) }} 
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                {{ form_widget(formulario.telefono,{'attr':{'class':'form-control','placeholder':'Teléfono'} }) }}
+              </div>
+              <div class="form-group mt-3">
+                {{ form_widget(formulario.mensaje,{'attr':{'class':'form-control','placeholder':'Mensaje'} }) }}
+              </div>
+              <br/>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+            {{ form_rest(formulario) }} 
+          {{ form_end(formulario) }}
+          
+          </section>
+          </div>
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= Map Section ======= -->
+    <section class="map mt-2">
+      <div class="container-fluid p-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2662076161714!2d-58.43558898460188!3d-34.597429380461115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca714ca97c45%3A0x43ed03ae31319e04!2sAr%C3%A1oz%20744%2C%20C1414DPP%20CABA!5e0!3m2!1ses-419!2sar!4v1636718464836!5m2!1ses-419!2sar" frameborder="0" style="border:0;" allowfullscreen="" ></iframe>
+      </div>
+    </section><!-- End Map Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

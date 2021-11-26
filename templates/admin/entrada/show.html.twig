@@ -1,0 +1,48 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Entrada{% endblock %}
+
+{% block body %}
+    <h1>Entrada</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entrada.id }}</td>
+            </tr>
+            <tr>
+                <th>Título</th>
+                <td>{{ entrada.titulo }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{{ entrada.fecha ? entrada.fecha|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Categoría</th>
+                <td>{{ entrada.categoria.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Etiquetas</th>
+                <td>
+                    <ul> 
+                        {% for etiqueta in entrada.etiquetas %}
+                            <li>{{ etiqueta.nombre }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Contenido</th>
+                <td>{{ entrada.contenido|raw|nl2br }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_entrada_index') }}">volver al listado</a>
+
+    <a href="{{ path('admin_entrada_edit', {'id': entrada.id}) }}">Editar</a>
+
+    {{ include('admin/entrada/_delete_form.html.twig') }}
+{% endblock %}

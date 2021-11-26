@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% block Style %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Estudio Dos Contadoras</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ asset('assets/img/favicon.ico')}}" rel="icon">
+  <link href="{{ asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+{% endblock %}
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <a href="{{ url('home_page')}}"><img src="{{ asset('assets/img/logo-header.png')}}" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{{ url('home_page')}}">INICIO</a></li>
+          <li><a href="{{ url('about_page')}}">NOSOTROS</a></li>
+          <li><a href="{{ url('services_page')}}">SERVICIOS</a></li>
+          <li><a href="{{ url('blog')}}">INFORMACIÓN ÚTIL</a></li>
+          <li><a href="{{ url('contact')}}">CONTACTO</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  {% block Body %}
+  {% endblock %}  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>MENÚ</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('home_page')}}">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('about_page')}}">Nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('services_page')}}">Servicios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('blog')}}">Información Útil</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>SERVICIOS</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('services_page')}}">Impositivo</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('services_page')}}">Contable</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('services_page')}}">Laboral</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>CONTACTO</h4>
+            <p>
+              <strong>Teléfono:</strong> +54 11 3025 2157<br>
+              <strong>Email:</strong> estudio.doscontadoras@gmail.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>REDES SOCIALES</h3>
+            <div class="social-links mt-3">
+              <a href="https://www.facebook.com/Dos-Contadoras-101849598629403/?hc_ref=ARRbMqL0U5vGd2m80ouKlYxlUKqb4vNGU1UdNAkPneze7yhZE3bgxl4eR79jgtRem2o&ref=nf_target&__tn__=kC-R" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://instagram.com/dos.contadoras?igshid=1bn0von16xmtb" class="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  {% block Javascript %}  
+  <!-- Vendor JS Files -->
+  <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ asset('assets/vendor/purecounter/purecounter.js')}}"></script>
+  <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/waypoints/noframework.waypoints.js')}}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ asset('assets/js/main.js')}}"></script>
+   {% endblock %}
+
+</body>
+
+</html>
